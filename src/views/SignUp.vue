@@ -23,7 +23,6 @@ export default{
         signUp(){
             if(this.account && this.userName && this.password && this.repeatPassword){
                 if(this.password == this.repeatPassword){
-                    //把所有頁面變成子元件是最容易的
                     this.data.account = this.account
                     this.data.userName = this.userName
                     this.data.password = this.password

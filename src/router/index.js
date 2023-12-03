@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/ExpenseTracker',
       name: 'ExpenseTracker',
-      component: () => import('../views/ExpenseTracker.vue')
+      component: () => import('../views/ExpenseTracker.vue'),
     },
   ]
 })

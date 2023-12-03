@@ -1,4 +1,5 @@
 <script>
+
 export default{
     data(){
         return{
@@ -16,7 +17,12 @@ export default{
                 this.data=JSON.parse(localStorage.getItem(this.accountInput))
                 if(this.data.password == this.passwordInput){
                     console.log("成功登入");
-                    this.$router.push('/ExpenseTracker') 
+                    this.$router.push({
+                        name: 'ExpenseTracker',
+                        state:{
+                            name:JSON.stringify(this.accountInput)
+                        }
+                    }) 
                 }else{
                     console.log("密碼錯誤");
                 }
@@ -27,11 +33,12 @@ export default{
 
             // this.$router.push('/ExpenseTracker') 
         },
-    }
+    },
 }
 </script>
 
 <template>
+
     <div class="outer">
         <div class="box">
             <form>
