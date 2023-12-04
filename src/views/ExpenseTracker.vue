@@ -55,7 +55,7 @@ export default {
                         break;
                 }
             }else{
-                console.log("請輸入內容及金額");
+                window.alert("請輸入內容及金額")
             }
         },
         openDelete(index){

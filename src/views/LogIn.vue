@@ -16,7 +16,6 @@ export default{
             if(localStorage.getItem(this.accountInput)!=null){
                 this.data=JSON.parse(localStorage.getItem(this.accountInput))
                 if(this.data.password == this.passwordInput){
-                    console.log("成功登入");
                     this.$router.push({
                         name: 'ExpenseTracker',
                         state:{
@@ -24,10 +23,10 @@ export default{
                         }
                     }) 
                 }else{
-                    console.log("密碼錯誤");
+                    window.alert("密碼錯誤")
                 }
             }else{
-                console.log("該帳號尚未建立");
+                window.alert("該帳號尚未建立")
             }
 
 

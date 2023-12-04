@@ -30,13 +30,13 @@ export default{
                         localStorage.setItem(this.account,JSON.stringify(this.data))
                         this.$router.push('/')
                     }else{
-                        console.log("該帳號已建立，請更換帳號");
+                        window.alert("該帳號已註冊，請更換帳號")
                     }
                 }else{
-                    console.log("兩次密碼不相同");
+                    window.alert("兩次輸入的密碼不相同")
                 }
             }else{
-                console.log("請完整輸入資料");
+                window.alert("請完整輸入資料")
             }
         }
     }
